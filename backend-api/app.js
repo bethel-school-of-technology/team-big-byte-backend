@@ -12,10 +12,12 @@ var app = express();
 
 
 // MONGO CONNECTION
-var connectionString = " mongodb://127.0.0.1/express-api";
+var connectionString = "mongodb+srv://dbuser:Password1!@cluster0.b5i8c.mongodb.net/bigbyte";
 mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(){
     console.log("database is connected");
 })
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
